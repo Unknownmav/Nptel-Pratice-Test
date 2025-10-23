@@ -39,7 +39,7 @@ const quizData = {
         },
         {
             id: 3,
-            correctAnswer: ['D'], // Multiple correct options
+            correctAnswer: ['B','D'], // Multiple correct options
             text: 'Which of the following is/are public cloud platform(s)?',
             options: {
                 'A': 'Windows Server Hyper-V',
@@ -49,7 +49,7 @@ const quizData = {
             },
             explanation: [
                 "A: Windows Server Hyper-V ❌ - Just a virtualization platform, not a public cloud.",
-                "B: Google Cloud Interconnect ❌ - Part of Google Cloud public cloud services.",
+                "B: Google Cloud Interconnect✅ - Part of Google Cloud public cloud services.",
                 "C: Amazon Virtual Private Cloud ❌ - A VPC is a private network within AWS, not the whole public cloud.",
                 "D: Microsoft Azure ✅ - Microsoft’s public cloud platform for services and apps."
             ]
