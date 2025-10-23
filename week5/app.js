@@ -137,22 +137,22 @@ const quizData = {
             ]
         },
         {
-            id: 8,
-            correctAnswer: 'B',
-            text: 'You are designing a multi-region data analytics pipeline on GCP. You want durable, low-latency storage for massive structured logs and real-time dashboarding/alerts. Best services?',
-            options: {
-                'A': 'Cloud Storage + Dataflow + Looker',
-                'B': 'Bigtable + Pub/Sub + Cloud Monitoring',
-                'C': 'Firestore + Data Studio + Cloud Functions',
-                'D': 'BigQuery + Pub/Sub + Data Studio'
-            },
-            explanation: [
-                "📊 GCP Analytics Pipeline",
-                "A: ❌ Wrong. Cloud Storage is batch-oriented.",
-                "B: ✅ Correct. Bigtable (low-latency) + Pub/Sub (streaming) + Cloud Monitoring (alerts/dashboards).",
-                "C: ❌ Wrong. Firestore not optimized for massive analytics.",
-                "D: ❌ Wrong. BigQuery is batch analytics, not real-time."
-            ]
+          id: 8,
+    correctAnswer: 'B',
+    text: 'Which scheduling strategy in cloud resource management aims to reduce the number of physical machines used, without violating performance constraints?',
+    options: {
+        'A': 'Round-robin scheduling',
+        'B': 'Energy-aware scheduling',
+        'C': 'Priority-based scheduling',
+        'D': 'First-come-first-serve'
+    },
+    explanation: [
+        "⚡ Cloud Resource Management",
+        "A: ❌ Wrong. Round-robin just distributes tasks evenly.",
+        "B: ✅ Correct. Energy-aware scheduling reduces the number of physical machines while meeting performance needs.",
+        "C: ❌ Wrong. Priority-based scheduling focuses on task priority, not machine usage.",
+        "D: ❌ Wrong. FCFS schedules tasks by arrival order, ignoring resource optimization."
+    ]
         },
         {
             id: 9,
@@ -556,4 +556,5 @@ if (document.readyState === 'loading') {
 } else {
     console.log('Document already loaded, initializing immediately...');
     initializeQuiz();
+
 }
