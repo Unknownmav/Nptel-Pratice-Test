@@ -121,8 +121,8 @@ const quizData = {
         },
 
         {
-            id: 8,
-            correctAnswer: ['A','B', 'C'], // multiple correct
+                  id: 8,
+            correctAnswer: ['A', 'B', 'C'], // multiple correct
             text: 'The following problems are addressed through Web services:',
             options: {
                 'A': 'Firewall',
@@ -132,11 +132,12 @@ const quizData = {
             },
             explanation: [
                 "🌐 Web Services Benefits ⚙️",
-                "A: ❌ Firewall - Not directly addressed by web services.",
-                "B: ✅ Interoperability - Web services allow different systems to communicate.",
+                "A: ✅ Firewall - Web services can help bypass firewall issues by using standard HTTP protocols.",
+                "B: ✅ Interoperability - Web services allow different systems to communicate effectively.",
                 "C: ✅ Complexity - Web services simplify integration of distributed systems.",
-                "D: ❌ Speed - Not a primary problem addressed."
+                "D: ❌ Speed - Not a primary problem addressed by web services."
             ]
+
         },
         {
             id: 9,
@@ -537,4 +538,5 @@ if (document.readyState === 'loading') {
 } else {
     console.log('Document already loaded, initializing immediately...');
     initializeQuiz();
+
 }
