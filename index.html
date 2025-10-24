@@ -2,18 +2,97 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NPTEL Cloud Computing Course</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', Arial, sans-serif;
             background: linear-gradient(to right, #eef2ff, #f8fafc);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        header {
+            background-color: #fff;
+            border-top: 4px solid #4f46e5;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+        }
+
+        header span {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #4f46e5;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #111827;
+            margin: 10px 0;
+        }
+
+        header p {
+            color: #6b7280;
+            font-size: 1rem;
+        }
+
+        header p span {
+            color: #374151;
+            font-weight: 500;
+        }
+
+        section {
+            background-color: #fff;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+
+        section h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .week-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
         }
 
         .week-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            padding: 20px 10px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease-in-out;
         }
 
@@ -24,117 +103,90 @@
 
         .week-btn.active {
             background: linear-gradient(to right, #10b981, #059669);
-            color: white !important;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+            fill: white;
         }
     </style>
 </head>
 
-<body class="min-h-screen">
+<body>
+    <div class="container">
 
-    <div class="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
-
-        <!-- Header -->
-        <header class="bg-white shadow-xl rounded-2xl p-6 mb-8 border-t-4 border-indigo-600 text-center">
-            <span class="text-sm font-semibold text-indigo-600 uppercase tracking-wider">NPTEL Online Test</span>
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">Cloud Computing</h1>
-            <p class="mt-2 text-base sm:text-lg text-gray-500">
-                Creator: <span class="font-medium text-gray-700">MOMO</span>
-            </p>
+        <header>
+            <span>NPTEL Online Test</span>
+            <h1>Cloud Computing</h1>
+            <p>Creator: <span>MOMO</span></p>
         </header>
 
-        <!-- Weekly Tests -->
-        <section class="bg-white shadow-xl rounded-2xl p-6 space-y-6 border border-gray-100">
-            <h2 class="text-lg sm:text-xl font-bold text-gray-800 border-b pb-3">Weekly Practice Tests</h2>
+        <section>
+            <h2>Weekly Practice Tests</h2>
+            <div class="week-grid">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-                <!-- Each week -->
-                <a href="#" data-week="1"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
+                <a href="#" data-week="1" class="week-btn">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M9 11l3 3L22 4" />
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" stroke="white"
+                            stroke-width="2" fill="none" />
+                    </svg>
                     <span>Week 1 📝😜</span>
                 </a>
 
-                <a href="#" data-week="2"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
+                <a href="#" data-week="2" class="week-btn">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none" />
+                        <path d="M12 6v6l4 2" stroke="white" stroke-width="2" fill="none" />
+                    </svg>
                     <span>Week 2 🎯🔥</span>
                 </a>
-
-                <a href="#" data-week="3"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
-                    <span>Week 3 🤯📚</span>
-                </a>
-
-                <a href="#" data-week="4"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
-                    <span>Week 4 🚀🤣</span>
-                </a>
-
-                <a href="#" data-week="5"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
-                    <span>Week 5 💡🤓</span>
-                </a>
-
-                <a href="#" data-week="6"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
-                    <span>Week 6 ⚡😎</span>
-                </a>
-
-                <a href="#" data-week="7"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
-                    <span>Week 7 🧠🔥</span>
-                </a>
-
-                <a href="#" data-week="8"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
-                    <span>Week 8 🤓😂</span>
-                </a>
-
-                <a href="#" data-week="9"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
-                    <span>Week 9 🕹️😜</span>
-                </a>
-
-                <a href="#" data-week="10"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
-                    <span>Week 10 🦾🤩</span>
-                </a>
-
-                <a href="#" data-week="11"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
-                    <span>Week 11 🏆😆</span>
-                </a>
-
-                <a href="#" data-week="12"
-                    class="week-btn bg-indigo-600 text-white py-6 px-4 rounded-xl shadow-md flex flex-col items-center justify-center text-center font-semibold">
-                    <i data-lucide="clipboard-check" class="w-8 h-8 mb-2"></i>
-                    <span>Week 12 🎉🤪</span>
-                </a>
+                <!-- Week 3 --> <a href="week3/week3.html" data-week="3" class="week-btn"> <svg class="icon" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="white" stroke-width="2" fill="none" />
+                        <path d="M3 9h18" stroke="white" stroke-width="2" fill="none" />
+                    </svg> <span>Week 3 🚀💪</span> </a> <!-- Week 4 --> <a href="week4/week4.html" data-week="4" class="week-btn"> <svg
+                        class="icon" viewBox="0 0 24 24">
+                        <polygon points="5 3 19 12 5 21 5 3" stroke="white" stroke-width="2" fill="none" />
+                    </svg> <span>Week 4 ⚡🌈</span> </a> <!-- Week 5 --> <a href="week5/week5.html" data-week="5" class="week-btn"> <svg
+                        class="icon" viewBox="0 0 24 24">
+                        <path d="M12 20l9-5-9-5-9 5 9 5z" stroke="white" stroke-width="2" fill="none" />
+                    </svg> <span>Week 5 📘💥</span> </a> <!-- Week 6 --> <a href="week6/week6.html" data-week="6" class="week-btn"> <svg
+                        class="icon" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none" />
+                        <path d="M8 12h8" stroke="white" stroke-width="2" fill="none" />
+                    </svg> <span>Week 6 🌍🧠</span> </a> <!-- Week 7 --> <a href="week7/week7.html" data-week="7" class="week-btn"> <svg
+                        class="icon" viewBox="0 0 24 24">
+                        <path d="M12 2l4 8H8l4-8zM2 22h20l-10-6-10 6z" stroke="white" stroke-width="2" fill="none" />
+                    </svg> <span>Week 7 💡🔥</span> </a> <!-- Week 8 --> <a href="week8/week8.html" data-week="8" class="week-btn"> <svg
+                        class="icon" viewBox="0 0 24 24">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke="white" stroke-width="2" fill="none" />
+                        <polyline points="7 10 12 15 17 10" stroke="white" stroke-width="2" fill="none" />
+                    </svg> <span>Week 8 🧩✨</span> </a> <!-- Week 9 --> <a href="week9/week9.html" data-week="9" class="week-btn"> <svg
+                        class="icon" viewBox="0 0 24 24">
+                        <polygon points="12 2 19 21 5 21" stroke="white" stroke-width="2" fill="none" />
+                    </svg> <span>Week 9 🎯🚀</span> </a> <!-- Week 10 --> <a href="week10/week10.html" data-week="10" class="week-btn">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12 2v20M2 12h20" stroke="white" stroke-width="2" fill="none" />
+                    </svg> <span>Week 10 💻🔥</span> </a> <!-- Week 11 --> <a href="week11/week11.html" data-week="11" class="week-btn">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5v14" stroke="white" stroke-width="2" fill="none" />
+                    </svg> <span>Week 11 ⚙️📚</span> </a> <!-- Week 12 --> <a href="week12/week12.html" data-week="12" class="week-btn">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M2 12l10-10 10 10-10 10-10-10z" stroke="white" stroke-width="2" fill="none" />
+                    </svg> <span>Week 12 🏆🎓</span> </a>
+                <!-- Add more week buttons as needed -->
             </div>
         </section>
 
     </div>
 
     <script>
-        lucide.createIcons();
-
         const weekButtons = document.querySelectorAll('.week-btn');
 
         function highlightWeek(button) {
-            weekButtons.forEach(btn => {
-                btn.classList.remove('active');
-                btn.classList.add('bg-indigo-600');
-            });
-            button.classList.remove('bg-indigo-600');
+            weekButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
             localStorage.setItem('activeWeek', button.dataset.week);
         }
@@ -143,21 +195,19 @@
             btn.addEventListener('click', e => {
                 e.preventDefault();
                 highlightWeek(btn);
-
                 const weekNumber = btn.dataset.week;
-                setTimeout(() => {
-                    window.location.href = `week${weekNumber}/week${weekNumber}.html`;
-                }, 300);
+                // redirect to week page (ensure file exists)
+                window.location.href = `week${weekNumber}/week${weekNumber}.html`;
             });
         });
 
+        // Restore active week on reload
         const savedWeek = localStorage.getItem('activeWeek');
         if (savedWeek) {
             const activeBtn = document.querySelector(`.week-btn[data-week="${savedWeek}"]`);
-            if (activeBtn) highlightWeek(activeBtn);
+            if (activeBtn) activeBtn.classList.add('active');
         }
     </script>
-
 </body>
 
 </html>
